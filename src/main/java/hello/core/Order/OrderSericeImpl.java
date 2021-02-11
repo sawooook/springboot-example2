@@ -6,17 +6,34 @@ import hello.core.Discount.RateDiscountPolicy;
 import hello.core.Member.Member;
 import hello.core.Member.MemberRepository;
 import hello.core.Member.MemoryMemberRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
+@RequiredArgsConstructor
 public class OrderSericeImpl implements OrderSerivce {
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy ;
+//
+//    @Autowired
+//    public void setMemberRepository(DiscountPolicy discountPolicy) {
+//        this.discountPolicy = discountPolicy;
+//    }
+//
+//    @Autowired
+//    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
+//        this.discountPolicy = discountPolicy;
+//    }
 
-    public OrderSericeImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
-//    final은 무조건 값이 할당해 있어야함
+//    @Autowired
+//    public OrderSericeImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
+
+    //    final은 무조건 값이 할당해 있어야함
 
     /*
     문제점 발견
@@ -42,3 +59,5 @@ public class OrderSericeImpl implements OrderSerivce {
         return order;
     }
 }
+
+

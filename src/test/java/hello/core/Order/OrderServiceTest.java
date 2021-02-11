@@ -10,6 +10,7 @@ import hello.core.Member.MemberService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.internal.matchers.Or;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class OrderServiceTest {
     AppConfig appConfig = new AppConfig();
@@ -38,6 +39,5 @@ public class OrderServiceTest {
 
 
     }
-
 
 }
